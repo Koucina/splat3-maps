@@ -573,7 +573,7 @@ a:hover {
 .page-header {
     color: #fff;
     text-align: center;
-    background-image: linear-gradient(120deg, #e9ff3b, #5f3ae0);
+    background-image: linear-gradient(0.25turn, #e9ff3b, #5f3ae0);
 }
 
 @media screen and (min-width: 64em) {
