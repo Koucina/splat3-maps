@@ -1,0 +1,1134 @@
+@charset "UTF-8";
+/**********************
+/* レスポンシブ
+**********************/
+
+/* PC */
+
+@media screen and (min-width: 1195px) {
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) {
+        width: calc(241 / 1440 * 100vw);
+        height: calc(52 / 1440 * 100vw);
+        position: fixed;
+        right: calc(10 / 1440 * 100vw);
+        bottom: calc(-14 / 1440 * 100vw);
+        z-index: -100;
+        visibility: hidden;
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=free] {
+        bottom: calc(-6 / 1440 * 100vw);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__body {
+        width: 100%;
+        height: 100%;
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn {
+        width: 100%;
+        height: 100%;
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]).is-visible.is-show {
+        z-index: 9999;
+        visibility: visible;
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a {
+        position: relative;
+        display: block;
+        width: calc(241 / 1440 * 100vw);
+        height: calc(52 / 1440 * 100vw);
+        transition: transform .4s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    /* html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a::before{
+    content: "";
+    display: block;
+    width: calc(241 / 1440 * 100vw);
+    height: calc(52 / 1440 * 100vw);
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity .25s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    border-radius: calc(4 / 1440 * 100vw) calc(4 / 1440 * 100vw) 0 0;
+    box-shadow: rgba(0,0,0,0.21) 0 0 calc(14 / 1440 * 100vw);
+    -webkit-box-shadow: rgba(0,0,0,0.21) 0 0 calc(14 / 1440 * 100vw);
+  } */
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a div {
+        position: absolute;
+        top: calc(3 / 1440 * 100vw);
+        left: 0;
+        display: block;
+        width: calc(235 / 1440 * 100vw);
+        height: calc(49 / 1440 * 100vw);
+        /* background: #e60012; */
+        transform: translate3d(0, calc(49 / 1440 * 100vw), 0);
+        transition: transform .4s cubic-bezier(0.19, 1, 0.22, 1);
+        box-shadow: rgba(0, 0, 0, 0.21) 0 0 calc(14 / 1440 * 100vw);
+        -webkit-box-shadow: rgba(0, 0, 0, 0.21) 0 0 calc(14 / 1440 * 100vw);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a div::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(241 / 1440 * 100vw);
+        height: calc(52 / 1440 * 100vw);
+        background: url(./img/bg_btn.png?202205) 50% 50% no-repeat;
+        background-size: contain;
+    }
+    /* html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]).is-shown.is-show .ncommon-purchase-v2__btn a::before{
+    opacity: 1;
+    transition: opacity .75s cubic-bezier(0.215, 0.61, 0.355, 1) .1s; */
+    /* } */
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]).is-shown.is-show .ncommon-purchase-v2__btn a div {
+        transform: translate3d(0, 0, 0);
+        transition: transform .4s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+    }
+    html:not(.ncommon-purchase-v3-tab).no-touchevents .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn:hover a {
+        transform: translate3d(0, calc(-4 / 1440 * 100vw), 0);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div i {
+        width: calc(35 / 1440 * 100vw);
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        /* background: #ca1215; */
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div i::before {
+        content: "";
+        width: calc(17 / 1440 * 100vw);
+        height: calc(17 / 1440 * 100vw);
+        background: url(./img/ico_cart.svg?202205) 50% 50% no-repeat;
+        background-size: cover;
+        display: block;
+        position: absolute;
+        top: calc(8 / 1440 * 100vw);
+        left: calc(8 / 1440 * 100vw);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn div i::before {
+        top: calc(12 / 1440 * 100vw);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div span {
+        display: block;
+        width: calc(168 / 1440 * 100vw);
+        height: calc(15 / 1440 * 100vw);
+        position: absolute;
+        top: calc(10 / 1440 * 100vw);
+        left: calc(53 / 1440 * 100vw);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn div span {
+        width: calc(118 / 1440 * 100vw);
+        height: calc(27 / 1440 * 100vw);
+        top: calc(8 / 1440 * 100vw);
+        left: calc(71 / 1440 * 100vw);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div span {
+        background: url(./img/label_buy.svg?202205) 50% 50% no-repeat;
+        background-size: contain;
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn div span {
+        background: url(./img/label_free.svg?202205) 50% 50% no-repeat;
+        background-size: contain;
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=pre-order] .ncommon-purchase-v2__btn div span {
+        background: url(./img/label_pre_order.svg) 50% 50% no-repeat;
+        background-size: contain;
+    }
+}
+
+/* PC 最大で固定の範囲 */
+
+@media screen and (min-width: 2560px) {
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) {
+        width: calc(2560 / 1440 * 241px);
+        height: calc(2560 / 1440 * 52px);
+        bottom: calc(2560 / 1440 * -14px);
+        right: calc(2560 / 1440 * 10px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=free] {
+        bottom: calc(2560 / 1440 * -6px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a {
+        width: calc(2560 / 1440 * 241px);
+        height: calc(2560 / 1440 * 52px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a div {
+        width: calc(2560 / 1440 * 235px);
+        height: calc(2560 / 1440 * 49px);
+        top: calc(2560 / 1440 * 3px);
+        transform: translate3d(0, calc(2560 / 1440 * 49px), 0);
+        box-shadow: rgba(0, 0, 0, 0.21) 0 0 calc(2560 / 1440 * 14px);
+        -webkit-box-shadow: rgba(0, 0, 0, 0.21) 0 0 calc(2560 / 1440 * 14px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a div::before {
+        width: calc(2560 / 1440 * 241px);
+        height: calc(2560 / 1440 * 52px);
+    }
+    .no-touchevents html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn:hover a {
+        transform: translate3d(0, calc(2560 / 1440 * -4px), 0);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div i {
+        width: calc(2560 / 1440 * 35px);
+        overflow: hidden;
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div i::before {
+        width: calc(2560 / 1440 * 17px);
+        height: calc(2560 / 1440 * 17px);
+        top: calc(2560 / 1440 * 8px);
+        left: calc(2560 / 1440 * 8px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn div i::before {
+        top: calc(2560 / 1440 * 12px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div span {
+        width: calc(2560 / 1440 * 168px);
+        height: calc(2560 / 1440 * 15px);
+        top: calc(2560 / 1440 * 10px);
+        left: calc(2560 / 1440 * 53px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn div span {
+        width: calc(2560 / 1440 * 118px);
+        height: calc(2560 / 1440 * 27px);
+        top: calc(2560 / 1440 * 8px);
+        left: calc(2560 / 1440 * 71px);
+    }
+}
+
+/* PC 最小で固定の範囲 */
+
+@media screen and (min-width: 1195px) and (max-width: 1279.98px) {
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) {
+        width: calc(1280 / 1440 * 241px);
+        height: calc(1280 / 1440 * 52px);
+        bottom: calc(1280 / 1440 * -14px);
+        right: calc(1280 / 1440 * 10px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=free] {
+        bottom: calc(1280 / 1440 * -6px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a {
+        width: calc(1280 / 1440 * 241px);
+        height: calc(1280 / 1440 * 52px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a div {
+        width: calc(1280 / 1440 * 235px);
+        height: calc(1280 / 1440 * 49px);
+        top: calc(1280 / 1440 * 3px);
+        box-shadow: rgba(0, 0, 0, 0.21) 0 0 calc(1280 / 1440 * 14px);
+        -webkit-box-shadow: rgba(0, 0, 0, 0.21) 0 0 calc(1280 / 1440 * 14px);
+        transform: translate3d(0, calc(1280 / 1440 * 49px), 0);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a div::before {
+        width: calc(1280 / 1440 * 241px);
+        height: calc(1280 / 1440 * 52px);
+    }
+    .no-touchevents html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn:hover a {
+        transform: translate3d(0, (1280 / 1440 * 4px), 0);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div i {
+        width: (1280 / 1440 * 35px);
+        overflow: hidden;
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div i::before {
+        width: (1280 / 1440 * 17px);
+        height: (1280 / 1440 * 17px);
+        top: (1280 / 1440 * 8px);
+        left: (1280 / 1440 * 8px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn div i::before {
+        top: (1280 / 1440 * 12px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div span {
+        width: (1280 / 1440 * 168px);
+        height: (1280 / 1440 * 15px);
+        top: (1280 / 1440 * 10px);
+        left: (1280 / 1440 * 53px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn div span {
+        width: (1280 / 1440 * 118px);
+        height: (1280 / 1440 * 27px);
+        top: (1280 / 1440 * 8px);
+        left: (1280 / 1440 * 71px);
+    }
+}
+
+/* Table （ipadProのサイズを入れる） */
+
+@media screen and (min-width: 750px) and (max-width: 1194.98px) {
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) {
+        width: 112px;
+        height: 112px;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: -100;
+        overflow: hidden;
+        visibility: hidden;
+        transform-origin: right bottom;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__body {
+        width: 77px;
+        height: 77px;
+        position: absolute;
+        right: 17px;
+        bottom: 17px;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn {
+        width: 77px;
+        height: 77px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate3d(112px, 0, 0);
+        transition: transform .4s cubic-bezier(0.19, 1, 0.22, 1)
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]).is-visible.is-show {
+        z-index: 9999;
+        visibility: visible;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]).is-shown.is-show .ncommon-purchase-v2__btn {
+        transform: translate3d(0, 0, 0);
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a {
+        position: relative;
+        display: block;
+        width: 77px;
+        height: 77px;
+        background: #e60012;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.21) 0 0 14px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.21) 0 0 14px;
+        border: #FFF 3px solid;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn i {
+        width: 100%;
+        height: 46.5px;
+        display: block;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn i {
+        height: 43px;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn i::before {
+        content: "";
+        width: 31px;
+        height: 26.5px;
+        background: url(./img/ico_cart_sp.svg) 50% 50% no-repeat;
+        background-size: cover;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 14px;
+        margin: 0 auto;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn i::before {
+        top: 11px;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn span {
+        display: block;
+        height: 25px;
+        background: #c3000e;
+        position: relative;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn span {
+        height: 28px;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn span::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 2px;
+        right: 0;
+        margin: 0 auto;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn span::before {
+        background: url(./img/label_buy_sp.svg?202205) 50% 50% no-repeat;
+        background-size: contain;
+        width: 36px;
+        height: 10px;
+        top: 5px;
+        left: 1px;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn span::before {
+        background: url(./img/label_free_sp.svg) 50% 50% no-repeat;
+        background-size: contain;
+        width: 49px;
+        height: 19.5px;
+        top: 4px;
+        left: 1px;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=pre-order] .ncommon-purchase-v2__btn span::before {
+        background: url(./img/label_pre_order_sp.svg) 50% 50% no-repeat;
+        background-size: contain;
+    }
+}
+
+/* SP */
+
+@media screen and (max-width: 749.98px) {
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) {
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: -100;
+        visibility: hidden;
+        transform-origin: right bottom;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__body {
+        width: 66px;
+        height: 66px;
+        position: absolute;
+        right: 11px;
+        bottom: 11px;
+        left: auto;
+        margin: 0;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn {
+        width: 66px;
+        height: 66px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate3d(80px, 0, 0);
+        transition: transform .4s cubic-bezier(0.19, 1, 0.22, 1)
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]).is-visible.is-show {
+        z-index: 9999;
+        visibility: visible;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]).is-shown.is-show .ncommon-purchase-v2__btn {
+        transform: translate3d(0, 0, 0);
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a {
+        position: relative;
+        display: block;
+        width: 66px;
+        height: 66px;
+        background: #e60012;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.21) 0 0 14px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.21) 0 0 14px;
+        border: #FFF 3px solid;
+        box-sizing: border-box;
+        overflow: hidden;
+        transition: none;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a::before {
+        display: none;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a div {
+        transform: none;
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a div::after {
+        display: none;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn i {
+        width: 100%;
+        height: 40px;
+        display: block;
+        background-color: transparent;
+        position: relative;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn i {
+        height: 36px;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn i::before {
+        content: "";
+        width: 26px;
+        height: 24px;
+        background: url(./img/ico_cart_sp.svg) 50% 50% no-repeat;
+        background-size: cover;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 12px;
+        margin: 0 auto;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn i::before {
+        top: 8px;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div span {
+        display: block;
+        height: 23px;
+        background-color: rgba(0, 0, 0, 0.2);
+        background-image: none;
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn div span {
+        height: 26px;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn span::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn span::before {
+        background: url(./img/label_buy_sp.svg?202205) 50% 50% no-repeat;
+        background-size: contain;
+        width: 32px;
+        height: 8px;
+        top: 4px;
+        left: 1px;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn span::before {
+        background: url(./img/label_free_sp.svg) 50% 50% no-repeat;
+        background-size: contain;
+        width: 44px;
+        height: 18px;
+        top: 3px;
+        left: 1px;
+    }
+    .ncommon-purchase-v2:not([data-ncp-mode=pc]):not([data-ncp-mode=sp])[data-ncp-type=pre-order] .ncommon-purchase-v2__btn span::before {
+        background: url(./img/label_pre_order_sp.svg) 50% 50% no-repeat;
+        background-size: contain;
+    }
+}
+
+/**********************
+/* レスポンシブでない場合
+**********************/
+
+/* [data-ncp-mode=pc] */
+
+html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) {
+    width: calc(241 / 1440 * 100vw);
+    height: calc(52 / 1440 * 100vw);
+    position: fixed;
+    right: calc(10 / 1440 * 100vw);
+    bottom: calc(-14 / 1440 * 100vw);
+    z-index: -100;
+    visibility: hidden;
+}
+
+html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp])[data-ncp-type=free] {
+    bottom: calc(-6 / 1440 * 100vw);
+}
+
+html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__body {
+    width: 100%;
+    height: 100%;
+}
+
+html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn {
+    width: 100%;
+    height: 100%;
+}
+
+html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]).is-visible.is-show {
+    z-index: 9999;
+    visibility: visible;
+}
+
+html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a {
+    position: relative;
+    display: block;
+    width: calc(241 / 1440 * 100vw);
+    height: calc(52 / 1440 * 100vw);
+    transition: transform .4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a::before{
+  content: "";
+  display: block;
+  width: calc(241 / 1440 * 100vw);
+  height: calc(52 / 1440 * 100vw);
+  background: rgba(0,0,0,0.6);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity .25s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+  border-radius: calc(4 / 1440 * 100vw) calc(4 / 1440 * 100vw) 0 0;
+  box-shadow: rgba(0,0,0,0.21) 0 0 calc(14 / 1440 * 100vw);
+  -webkit-box-shadow: rgba(0,0,0,0.21) 0 0 calc(14 / 1440 * 100vw);
+} */
+
+html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a div {
+    position: absolute;
+    top: calc(3 / 1440 * 100vw);
+    left: 0;
+    display: block;
+    width: calc(235 / 1440 * 100vw);
+    height: calc(49 / 1440 * 100vw);
+    /* background: #e60012; */
+    transform: translate3d(0, calc(49 / 1440 * 100vw), 0);
+    transition: transform .4s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: rgba(0, 0, 0, 0.21) 0 0 calc(14 / 1440 * 100vw);
+    -webkit-box-shadow: rgba(0, 0, 0, 0.21) 0 0 calc(14 / 1440 * 100vw);
+}
+
+html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a div::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(241 / 1440 * 100vw);
+    height: calc(52 / 1440 * 100vw);
+    background: url(./img/bg_btn.png?202205) 50% 50% no-repeat;
+    background-size: contain;
+}
+
+/* html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]).is-shown.is-show .ncommon-purchase-v2__btn a::before {
+  opacity: 1;
+  transition: opacity .75s cubic-bezier(0.215, 0.61, 0.355, 1) .1s;
+} */
+
+html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]).is-shown.is-show .ncommon-purchase-v2__btn a div {
+    transform: translate3d(0, 0, 0);
+    transition: transform .4s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+}
+
+html:not(.ncommon-purchase-v3-tab).no-touchevents .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn:hover a {
+    transform: translate3d(0, calc(-4 / 1440 * 100vw), 0);
+}
+
+html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div i {
+    width: calc(35 / 1440 * 100vw);
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* background: #ca1215; */
+}
+
+html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div i::before {
+    content: "";
+    width: calc(17 / 1440 * 100vw);
+    height: calc(17 / 1440 * 100vw);
+    background: url(./img/ico_cart.svg?202205) 50% 50% no-repeat;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    top: calc(8 / 1440 * 100vw);
+    left: calc(8 / 1440 * 100vw);
+}
+
+html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn div i::before {
+    top: calc(12 / 1440 * 100vw);
+}
+
+html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div span {
+    display: block;
+    width: calc(168 / 1440 * 100vw);
+    height: calc(15 / 1440 * 100vw);
+    position: absolute;
+    top: calc(10 / 1440 * 100vw);
+    left: calc(53 / 1440 * 100vw);
+}
+
+html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn div span {
+    width: calc(118 / 1440 * 100vw);
+    height: calc(27 / 1440 * 100vw);
+    top: calc(8 / 1440 * 100vw);
+    left: calc(71 / 1440 * 100vw);
+}
+
+html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div span {
+    background: url(./img/label_buy.svg?202205) 50% 50% no-repeat;
+    background-size: contain;
+}
+
+html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn div span {
+    background: url(./img/label_free.svg?202205) 50% 50% no-repeat;
+    background-size: contain;
+}
+
+html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp])[data-ncp-type=pre-order] .ncommon-purchase-v2__btn div span {
+    background: url(./img/label_pre_order.svg) 50% 50% no-repeat;
+    background-size: contain;
+}
+
+/* PC 最大で固定の範囲 */
+
+@media screen and (min-width: 2560px) {
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) {
+        width: calc(2560 / 1440 * 241px);
+        height: calc(2560 / 1440 * 52px);
+        bottom: calc(2560 / 1440 * -14px);
+        right: calc(2560 / 1440 * 10px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp])[data-ncp-type=free] {
+        bottom: calc(2560 / 1440 * -6px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a {
+        width: calc(2560 / 1440 * 241px);
+        height: calc(2560 / 1440 * 52px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a div {
+        width: calc(2560 / 1440 * 235px);
+        height: calc(2560 / 1440 * 49px);
+        top: calc(2560 / 1440 * 3px);
+        transform: translate3d(0, calc(2560 / 1440 * 49px), 0);
+        box-shadow: rgba(0, 0, 0, 0.21) 0 0 calc(2560 / 1440 * 14px);
+        -webkit-box-shadow: rgba(0, 0, 0, 0.21) 0 0 calc(2560 / 1440 * 14px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a div::before {
+        width: calc(2560 / 1440 * 241px);
+        height: calc(2560 / 1440 * 52px);
+    }
+    html:not(.ncommon-purchase-v3-tab).no-touchevents .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn:hover a {
+        transform: translate3d(0, calc(2560 / 1440 * -4px), 0);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div i {
+        width: calc(2560 / 1440 * 35px);
+        overflow: hidden;
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div i::before {
+        width: calc(2560 / 1440 * 17px);
+        height: calc(2560 / 1440 * 17px);
+        top: calc(2560 / 1440 * 8px);
+        left: calc(2560 / 1440 * 8px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn div i::before {
+        top: calc(2560 / 1440 * 12px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div span {
+        width: calc(2560 / 1440 * 168px);
+        height: calc(2560 / 1440 * 15px);
+        top: calc(2560 / 1440 * 10px);
+        left: calc(2560 / 1440 * 53px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn div span {
+        width: calc(2560 / 1440 * 118px);
+        height: calc(2560 / 1440 * 27px);
+        top: calc(2560 / 1440 * 8px);
+        left: calc(2560 / 1440 * 71px);
+    }
+}
+
+/* PC 最小で固定の範囲 */
+
+@media screen and (max-width: 1280px) {
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) {
+        width: calc(1280 / 1440 * 241px);
+        height: calc(1280 / 1440 * 52px);
+        bottom: calc(1280 / 1440 * -14px);
+        right: calc(1280 / 1440 * 10px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp])[data-ncp-type=free] {
+        bottom: calc(1280 / 1440 * -6px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a {
+        width: calc(1280 / 1440 * 241px);
+        height: calc(1280 / 1440 * 52px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a div {
+        width: calc(1280 / 1440 * 235px);
+        height: calc(1280 / 1440 * 49px);
+        top: calc(1280 / 1440 * 3px);
+        box-shadow: rgba(0, 0, 0, 0.21) 0 0 calc(1280 / 1440 * 14px);
+        -webkit-box-shadow: rgba(0, 0, 0, 0.21) 0 0 calc(1280 / 1440 * 14px);
+        transform: translate3d(0, calc(1280 / 1440 * 49px), 0);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn a div::before {
+        width: calc(1280 / 1440 * 241px);
+        height: calc(1280 / 1440 * 52px);
+    }
+    html:not(.ncommon-purchase-v3-tab).no-touchevents .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn:hover a {
+        transform: translate3d(0, calc(1280 / 1440 * -4px), 0);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div i {
+        width: calc(1280 / 1440 * 35px);
+        overflow: hidden;
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div i::before {
+        width: calc(1280 / 1440 * 17px);
+        height: calc(1280 / 1440 * 17px);
+        top: calc(1280 / 1440 * 8px);
+        left: calc(1280 / 1440 * 8px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn div i::before {
+        top: calc(1280 / 1440 * 12px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp]) .ncommon-purchase-v2__btn div span {
+        width: calc(1280 / 1440 * 168px);
+        height: calc(1280 / 1440 * 15px);
+        top: calc(1280 / 1440 * 10px);
+        left: calc(1280 / 1440 * 53px);
+    }
+    html:not(.ncommon-purchase-v3-tab) .ncommon-purchase-v2[data-ncp-mode=pc]:not([data-ncp-mode=sp])[data-ncp-type=free] .ncommon-purchase-v2__btn div span {
+        width: calc(1280 / 1440 * 118px);
+        height: calc(1280 / 1440 * 27px);
+        top: calc(1280 / 1440 * 8px);
+        left: calc(1280 / 1440 * 71px);
+    }
+}
+
+/* [data-ncp-mode=sp] */
+
+/* Table （ipadProのサイズを入れる） */
+
+@media screen and (min-width: 750px) {
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) {
+        width: 112px;
+        height: 112px;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: -100;
+        overflow: hidden;
+        visibility: hidden;
+        transform-origin: right bottom;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) .ncommon-purchase-v2__body {
+        width: 77px;
+        height: 77px;
+        position: absolute;
+        right: 17px;
+        bottom: 17px;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) .ncommon-purchase-v2__btn {
+        width: 77px;
+        height: 77px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate3d(112px, 0, 0);
+        transition: transform .4s cubic-bezier(0.19, 1, 0.22, 1)
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]).is-visible.is-show {
+        z-index: 9999;
+        visibility: visible;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]).is-shown.is-show .ncommon-purchase-v2__btn {
+        transform: translate3d(0, 0, 0);
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) .ncommon-purchase-v2__btn a {
+        position: relative;
+        display: block;
+        width: 77px;
+        height: 77px;
+        background: #e60012;
+        border-radius: 50%;
+        box-shadow: 0px 0px 7px 0 rgba(0, 0, 0, 0.6);
+        border: #FFF 2.5px solid;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) .ncommon-purchase-v2__btn i {
+        width: 100%;
+        height: 46.5px;
+        display: block;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc])[data-ncp-type=free] .ncommon-purchase-v2__btn i {
+        height: 43px;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) .ncommon-purchase-v2__btn i::before {
+        content: "";
+        width: 31px;
+        height: 26.5px;
+        background: url(./img/ico_cart_sp.svg) 50% 50% no-repeat;
+        background-size: cover;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 14px;
+        margin: 0 auto;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc])[data-ncp-type=free] .ncommon-purchase-v2__btn i::before {
+        top: 11px;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) .ncommon-purchase-v2__btn span {
+        display: block;
+        height: 25px;
+        background: #c3000e;
+        position: relative;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc])[data-ncp-type=free] .ncommon-purchase-v2__btn span {
+        height: 28px;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) .ncommon-purchase-v2__btn span::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 2px;
+        right: 0;
+        margin: 0 auto;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) .ncommon-purchase-v2__btn span::before {
+        background: url(./img/label_buy_sp.svg?202205) 50% 50% no-repeat;
+        background-size: contain;
+        width: 36px;
+        height: 10px;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc])[data-ncp-type=free] .ncommon-purchase-v2__btn span::before {
+        background: url(./img/label_free_sp.svg) 50% 50% no-repeat;
+        background-size: contain;
+        width: 49px;
+        height: 19.5px;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc])[data-ncp-type=pre-order] .ncommon-purchase-v2__btn span::before {
+        background: url(./img/label_pre_order_sp.svg) 50% 50% no-repeat;
+        background-size: contain;
+    }
+}
+
+/* SP */
+
+@media screen and (max-width: 749.98px) {
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) {
+        width: 80px;
+        height: 80px;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: -100;
+        visibility: hidden;
+        transform-origin: right bottom;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) .ncommon-purchase-v2__body {
+        width: 66px;
+        height: 66px;
+        position: absolute;
+        right: 10px;
+        bottom: 11px;
+        left: auto;
+        margin: 0;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) .ncommon-purchase-v2__btn {
+        width: 66px;
+        height: 66px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate3d(80px, 0, 0);
+        transition: transform .4s cubic-bezier(0.19, 1, 0.22, 1)
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]).is-visible.is-show {
+        z-index: 9999;
+        visibility: visible;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]).is-shown.is-show .ncommon-purchase-v2__btn {
+        transform: translate3d(0, 0, 0);
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) .ncommon-purchase-v2__btn a {
+        position: relative;
+        display: block;
+        width: 66px;
+        height: 66px;
+        background: #e60012;
+        border-radius: 50%;
+        box-shadow: 0px 0px 7px 0 rgba(0, 0, 0, 0.6);
+        border: #FFF 2.5px solid;
+        box-sizing: border-box;
+        overflow: hidden;
+        transition: none;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) .ncommon-purchase-v2__btn a::before {
+        display: none;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) .ncommon-purchase-v2__btn a div {
+        transform: none;
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) .ncommon-purchase-v2__btn a div::after {
+        display: none;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) .ncommon-purchase-v2__btn i {
+        width: 100%;
+        height: 40px;
+        display: block;
+        background-color: transparent;
+        position: relative;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc])[data-ncp-type=free] .ncommon-purchase-v2__btn i {
+        height: 36px;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) .ncommon-purchase-v2__btn i::before {
+        content: "";
+        width: 26px;
+        height: 24px;
+        background: url(./img/ico_cart_sp.svg) 50% 50% no-repeat;
+        background-size: cover;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 12px;
+        margin: 0 auto;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc])[data-ncp-type=free] .ncommon-purchase-v2__btn i::before {
+        top: 8px;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) .ncommon-purchase-v2__btn div span {
+        display: block;
+        height: 23px;
+        background-color: rgba(0, 0, 0, 0.2);
+        background-image: none;
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc])[data-ncp-type=free] .ncommon-purchase-v2__btn div span {
+        height: 26px;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) .ncommon-purchase-v2__btn span::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc]) .ncommon-purchase-v2__btn span::before {
+        background: url(./img/label_buy_sp.svg?202205) 50% 50% no-repeat;
+        background-size: contain;
+        width: 32px;
+        height: 8px;
+        top: 4px;
+        left: 1px;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc])[data-ncp-type=free] .ncommon-purchase-v2__btn span::before {
+        background: url(./img/label_free_sp.svg) 50% 50% no-repeat;
+        background-size: contain;
+        width: 44px;
+        height: 18px;
+        top: 3px;
+        left: 1px;
+    }
+    .ncommon-purchase-v2[data-ncp-mode=sp]:not([data-ncp-mode=pc])[data-ncp-type=pre-order] .ncommon-purchase-v2__btn span::before {
+        background: url(./img/label_pre_order_sp.svg) 50% 50% no-repeat;
+        background-size: contain;
+    }
+}
+
+/* .ncommon-purchase-v3-tab */
+
+@media screen and (min-width: 750px) {
+    .ncommon-purchase-v3-tab .ncommon-purchase-v2 {
+        width: 112px;
+        height: 112px;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: -100;
+        overflow: hidden;
+        visibility: hidden;
+        transform-origin: right bottom;
+    }
+    .ncommon-purchase-v3-tab .ncommon-purchase-v2 .ncommon-purchase-v2__body {
+        width: 77px;
+        height: 77px;
+        position: absolute;
+        right: 17px;
+        bottom: 17px;
+    }
+    .ncommon-purchase-v3-tab .ncommon-purchase-v2 .ncommon-purchase-v2__btn {
+        width: 77px;
+        height: 77px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate3d(112px, 0, 0);
+        transition: transform .4s cubic-bezier(0.19, 1, 0.22, 1)
+    }
+    .ncommon-purchase-v3-tab .ncommon-purchase-v2.is-visible.is-show {
+        z-index: 9999;
+        visibility: visible;
+    }
+    .ncommon-purchase-v3-tab .ncommon-purchase-v2.is-shown.is-show .ncommon-purchase-v2__btn {
+        transform: translate3d(0, 0, 0);
+    }
+    .ncommon-purchase-v3-tab .ncommon-purchase-v2 .ncommon-purchase-v2__btn a {
+        position: relative;
+        display: block;
+        width: 77px;
+        height: 77px;
+        background: #e60012;
+        border-radius: 50%;
+        box-shadow: 0px 0px 7px 0 rgba(0, 0, 0, 0.6);
+        border: #FFF 3px solid;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .ncommon-purchase-v3-tab .ncommon-purchase-v2 .ncommon-purchase-v2__btn i {
+        width: 100%;
+        height: 46.5px;
+        display: block;
+    }
+    .ncommon-purchase-v3-tab .ncommon-purchase-v2[data-ncp-type=free] .ncommon-purchase-v2__btn i {
+        height: 43px;
+    }
+    .ncommon-purchase-v3-tab .ncommon-purchase-v2 .ncommon-purchase-v2__btn i::before {
+        content: "";
+        width: 31px;
+        height: 26.5px;
+        background: url(./img/ico_cart_sp.svg) 50% 50% no-repeat;
+        background-size: cover;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 14px;
+        margin: 0 auto;
+    }
+    .ncommon-purchase-v3-tab .ncommon-purchase-v2[data-ncp-type=free] .ncommon-purchase-v2__btn i::before {
+        top: 11px;
+    }
+    .ncommon-purchase-v3-tab .ncommon-purchase-v2 .ncommon-purchase-v2__btn span {
+        display: block;
+        height: 25px;
+        background: #c3000e;
+        position: relative;
+    }
+    .ncommon-purchase-v3-tab .ncommon-purchase-v2[data-ncp-type=free] .ncommon-purchase-v2__btn span {
+        height: 28px;
+    }
+    .ncommon-purchase-v3-tab .ncommon-purchase-v2 .ncommon-purchase-v2__btn span::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 2px;
+        right: 0;
+        margin: 0 auto;
+    }
+    .ncommon-purchase-v3-tab .ncommon-purchase-v2 .ncommon-purchase-v2__btn span::before {
+        background: url(./img/label_buy_sp.svg?202205) 50% 50% no-repeat;
+        background-size: contain;
+        width: 36px;
+        height: 10px;
+        top: 4px;
+        left: 1px;
+    }
+    .ncommon-purchase-v3-tab .ncommon-purchase-v2[data-ncp-type=free] .ncommon-purchase-v2__btn span::before {
+        background: url(./img/label_free_sp.svg) 50% 50% no-repeat;
+        background-size: contain;
+        width: 49px;
+        height: 19.5px;
+    }
+    .ncommon-purchase-v3-tab .ncommon-purchase-v2[data-ncp-type=pre-order] .ncommon-purchase-v2__btn span::before {
+        background: url(./img/label_pre_order_sp.svg) 50% 50% no-repeat;
+        background-size: contain;
+    }
+}
+
+/* overwrite */
+
+.ncommon-purchase-v2__sale {
+    display: none !important;
+}
